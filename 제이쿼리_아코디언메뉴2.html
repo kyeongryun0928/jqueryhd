@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아코디언메뉴2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        body {
+            line-height: 1;
+            color: #333;
+        }
+
+        nav {
+            max-width: 960px;
+            width: 95%;
+            margin: 0 auto;
+            background-color: #000;
+            color: #fff;
+            height: 100vh;
+            padding: 30px;
+        }
+
+        .depth01>a {
+            height: 80px;
+            line-height: 80px;
+            font-size: 40px;
+            border-bottom: 1px dashed #fff;
+            display: block;
+        }
+
+        .depth01>.on {
+            color: coral;
+        }
+
+        .depth02 {
+            display: none;
+        }
+
+        .depth02 li a {
+            line-height: 50px;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.641);
+            padding-left: 30px;
+        }
+    </style>
+    <script src="lib/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $('.depth01>a').click(function () {
+                if ($(this).next().css('display') == 'none') {
+                    $('.depth02').slideUp();
+                    $(this).next().slideDown();
+
+                    // a태그한테 클래스면 제어
+                    //스타일추가 혹은 삭제
+                    //addClass 또는 removeclass
+
+
+                    $('.depth01>a').removeClass('on');
+
+                    $(this).addClass('on');
+
+                    // $('.on').css({
+                    //     'color': 'coral'
+                    // })
+
+
+                } else {
+                    $(this).next().slideUp();
+                    $(this).removeClass('on');
+                }
+            });
+        })//jquery end
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="depth01">
+                    <a href="#">회사소개</a>
+                    <ul class="depth02">
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">연혁</a></li>
+                        <li><a href="#">CI소개</a></li>
+                        <li><a href="#">위치안내</a></li>
+                    </ul><!-- depth02 end -->
+                </li><!-- depth01 end -->
+                <li class="depth01">
+                    <a href="#">무역사업</a>
+                    <ul class="depth02">
+                        <li><a href="#">소개</a></li>
+                        <li><a href="#">기능재료사업</a></li>
+                        <li><a href="#">뷰티사이언스사업</a></li>
+                        <li><a href="#">의약원료사업</a></li>
+                    </ul><!-- depth02 end -->
+                </li><!-- depth01 end -->
+                <li class="depth01">
+                    <a href="#">제약사업</a>
+                    <ul class="depth02">
+                        <li><a href="#">소개</a></li>
+                        <li><a href="#">천연물사업</a></li>
+                        <li><a href="#">완제의약품사업</a></li>
+                        <li><a href="#">기능성식품사업</a></li>
+                    </ul><!-- depth02 end -->
+                </li><!-- depth01 end -->
+            </ul>
+        </nav>
+    </header>
+
+
+</body>
+
+</html>

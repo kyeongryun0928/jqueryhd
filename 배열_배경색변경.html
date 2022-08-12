@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열_배경색변경</title>
+    <style>
+        #bg {
+            background-color: palevioletred
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            //배열 p.375
+            //:여러개의 데이터 값을 저장할 수 있는 공간
+            let color = ['palevioletred', 'yellow', 'skyblue', '#ff0000'];
+            let i = 0;
+            let btn = document.getElementsByTagName('button')[0];
+            let bodyBg = document.getElementById('bg');
+
+            btn.onclick = function () {
+                i++;
+                console.log(i);
+                if (i >= color.length) {
+                    i = 0;
+                }
+                bodyBg.style.backgroundColor = color[i];
+            }//btn.onclick
+        }//window.onLoad
+    </script>
+</head>
+
+<body id="bg">
+    <button type="button">배경색바꾸기</button>
+</body>
+
+</html>

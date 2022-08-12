@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문_if else</title>
+
+</head>
+
+<body>
+    <script>
+        //p.345
+        //if(조건식) {스트립트코드}
+
+        // let num = 10;
+        // if (num < 100) {
+        //     document.write('Hello', '<br>');
+        // } else {
+        //     document.write('ㅜㅜ');
+        // }
+
+        // let userName = prompt('방문자의 이름은?', '');
+        // if (userName) {
+        //     document.write(userName + '님 반갑습니다! 방문을 환영합니다.', '<br>');
+
+        // }
+
+        // let walk = prompt('하루에걷는양은 몇보인가요?', '');
+        // if (walk <= 1000) {
+        //     document.write(userName + '님 힘내주세요', '<br>');
+        // } else {
+        //     document.write(userName + '님 매우 훌륭해요');
+        // }
+
+        // //else if => 두가지 이상의 조건식 작성 
+        // if (조건식) {
+        //     스크립트 코드1;
+        // } else if (조건식) {
+        //     스트립트 코드2;
+        // } else if (조건식) {
+        //     스크립트 코드3;
+        // } else {
+        //     모든조건식에 만족되지 않을 때
+        //     스크립트코드4;
+        // }
+
+
+        let mon = prompt('현재는 몇 월 입니까?', '');
+        let imgCont = '<img src="img/relax1.jpg">'
+        let imgCont2 = '<img src="img/nature1.jpg">'
+        if (mon == 12 || mon == 12 + '월' || mon == 1 || mon == 1 + '월' || mon == 2 || mon == 2 + '월') {
+            document.write('스키의 계절 겨울이네요', '<br>' + imgCont);
+            document.getElementsByTagName('img')[0].style.width = '300px';
+        } else if (mon == 3 + '월' || mon == 4 + '월' || mon == 5 + '월') {
+            document.write('봄이네요', '<br>' + imgCont2);
+            document.getElementsByTagName('img')[0].style.width = '300px';
+        } else if (mon == 6 + '월' || mon == 7 + '월' || mon == 8 + '월') {
+            imgCont = '<img src="img/beach1.jpg">';
+            document.write('바다로 가기 좋은 여름이네요', '<br>' + imgCont);
+            document.getElementsByTagName('img')[0].style.width = '300px';
+        } else {
+            imgCont = '<img src="img/tree1.jpg">';
+            document.write('가을이네요', '<br>' + imgCont);
+            document.getElementsByTagName('img')[0].style.width = '300px';
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

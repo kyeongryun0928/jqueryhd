@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            display: none;
+        }
+
+        .close {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>
+            <button class="open">이미지보기</button>
+            <button class="close">이미지닫기</button>
+        </div>
+        <img src="img/hermansyah-7uXn7nudorc-unsplash.jpg" alt="해변">
+    </section>
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function () {
+            //var let const
+            let open = $('.open');
+
+            open.click(function () {
+                //$('img').show(); //show 나타남
+                $('img').slideDown(500); //1초가 1000
+                $('.close').show();
+                $('.open').hide();
+            });//click
+
+            $('.close').click(function () {
+                //$('img').hide(500); //hide 사라짐
+                $('img').slideUp(1000);
+                $('.close').hide();
+                $('.open').show();
+            });
+        });//jquery end
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문_다중if else문</title>
+</head>
+
+<body>
+    <script>
+        // if (조건식) {
+        //     if (조건식) {
+        //         스크립트 코드;
+        //     } else {
+        //         스트립트 코드;
+        //     }
+        // } else if(조건식){
+        //     if (조건식) {
+        //         스크립트 코드;
+        //     } else {
+        //         스크립트 코드;
+        //     }
+        // }
+
+        let gender = prompt('당신의 성별은 무었입니까?', '');
+        let age = prompt('당신의 나이는 어떻게 됩니까?', '');
+        if (gender == '남자') {
+            if (age >= 19) {
+                document.write('남자 성인입니다');
+            } else {
+                document.write('남자 미성년자 입니다');
+            }
+        } else if (gender == '여자') {
+            if (age >= 19) {
+                document.write('여자 성인입니다');
+            } else {
+                document.write('여자 미성년자 입니다');
+            }
+        } else {
+            alert('error')
+        }
+
+    </script>
+
+</body>
+
+</html>
